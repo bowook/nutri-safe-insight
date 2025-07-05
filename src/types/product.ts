@@ -1,3 +1,8 @@
+export interface Ingredient {
+  name: string;
+  amount: string; // 예: "210mg", "50μg", "1000mg"
+  unit: string; // 예: "mg", "μg", "IU"
+}
 
 export interface ProductInfo {
   company: string;
@@ -11,7 +16,7 @@ export interface ProductInfo {
   storage: string;
   precautions: string;
   functionalContent: string;
-  ingredients: string[];
+  ingredients: Ingredient[];
   standards: string;
 }
 

@@ -139,7 +139,7 @@ const ProductSearch: React.FC<ProductSearchProps> = ({ onProductSelect }) => {
               <div className="flex flex-wrap gap-1">
                 {selectedProduct.ingredients.map((ingredient, index) => (
                   <Badge key={index} variant="outline" className="bg-white text-blue-700 border-blue-200 text-xs">
-                    {ingredient}
+                    {ingredient.name} {ingredient.amount}{ingredient.unit}
                   </Badge>
                 ))}
               </div>
