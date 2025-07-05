@@ -41,6 +41,14 @@ const Index = () => {
     }
   };
 
+  const handleMedicationRemove = (medication: string) => {
+    setCurrentMedications(currentMedications.filter(m => m !== medication));
+    toast({
+      title: "약물 삭제됨",
+      description: `${medication}이(가) 목록에서 삭제되었습니다.`,
+    });
+  };
+
   const toggleFavorite = (item: string) => {
     if (favorites.includes(item)) {
       setFavorites(favorites.filter(f => f !== item));
@@ -185,6 +193,7 @@ const Index = () => {
                 <MedicationCheck 
                   medications={currentMedications}
                   onMedicationAdd={handleMedicationAdd}
+                  onMedicationRemove={handleMedicationRemove}
                   supplements={selectedSupplements}
                 />
               </CardContent>

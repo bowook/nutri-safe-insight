@@ -97,6 +97,21 @@ const InteractionResults: React.FC<InteractionResultsProps> = ({
 }) => {
   const { synergies, warnings, dangers } = getInteractionData(supplements);
 
+  const handleEvidenceClick = (evidence: string) => {
+    // 실제 링크로 변환하는 로직 (예시)
+    let searchUrl = '';
+    if (evidence.includes('Journal')) {
+      searchUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(evidence)}`;
+    } else if (evidence.includes('American Journal')) {
+      searchUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(evidence)}`;
+    } else if (evidence.includes('Nutrients')) {
+      searchUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(evidence)}`;
+    } else {
+      searchUrl = `https://scholar.google.com/scholar?q=${encodeURIComponent(evidence)}`;
+    }
+    window.open(searchUrl, '_blank');
+  };
+
   if (supplements.length === 0) {
     return (
       <div className="text-center py-8">
@@ -154,10 +169,13 @@ const InteractionResults: React.FC<InteractionResultsProps> = ({
               <CardContent className="pt-0">
                 <p className="text-sm text-gray-700 mb-2">{synergy.description}</p>
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span className="flex items-center space-x-1">
+                  <button
+                    onClick={() => handleEvidenceClick(synergy.evidence)}
+                    className="flex items-center space-x-1 hover:text-blue-600 transition-colors cursor-pointer"
+                  >
                     <ExternalLink className="h-3 w-3" />
                     <span>근거: {synergy.evidence}</span>
-                  </span>
+                  </button>
                 </div>
                 <div className="mt-2">
                   <Badge variant="outline" className="text-xs bg-blue-50 text-blue-700 border-blue-200">
@@ -190,10 +208,13 @@ const InteractionResults: React.FC<InteractionResultsProps> = ({
               <CardContent className="pt-0">
                 <p className="text-sm text-gray-700 mb-2">{warning.description}</p>
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span className="flex items-center space-x-1">
+                  <button
+                    onClick={() => handleEvidenceClick(warning.evidence)}
+                    className="flex items-center space-x-1 hover:text-blue-600 transition-colors cursor-pointer"
+                  >
                     <ExternalLink className="h-3 w-3" />
                     <span>근거: {warning.evidence}</span>
-                  </span>
+                  </button>
                 </div>
                 <div className="mt-2">
                   <Badge variant="outline" className="text-xs bg-orange-50 text-orange-700 border-orange-200">
@@ -226,10 +247,13 @@ const InteractionResults: React.FC<InteractionResultsProps> = ({
               <CardContent className="pt-0">
                 <p className="text-sm text-gray-700 mb-2">{danger.description}</p>
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span className="flex items-center space-x-1">
+                  <button
+                    onClick={() => handleEvidenceClick(danger.evidence)}
+                    className="flex items-center space-x-1 hover:text-blue-600 transition-colors cursor-pointer"
+                  >
                     <ExternalLink className="h-3 w-3" />
                     <span>근거: {danger.evidence}</span>
-                  </span>
+                  </button>
                 </div>
                 <div className="mt-2">
                   <Badge variant="destructive" className="text-xs">

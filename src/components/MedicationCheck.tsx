@@ -5,11 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Pill, Plus, AlertTriangle, XCircle, Search, Info } from "lucide-react";
+import { Pill, Plus, AlertTriangle, XCircle, Search, Info, X } from "lucide-react";
 
 interface MedicationCheckProps {
   medications: string[];
   onMedicationAdd: (medication: string) => void;
+  onMedicationRemove: (medication: string) => void;
   supplements: string[];
 }
 
@@ -98,6 +99,7 @@ const getMedicationInteractions = (medications: string[], supplements: string[])
 const MedicationCheck: React.FC<MedicationCheckProps> = ({ 
   medications, 
   onMedicationAdd, 
+  onMedicationRemove,
   supplements 
 }) => {
   const [medicationInput, setMedicationInput] = useState('');
@@ -196,6 +198,13 @@ const MedicationCheck: React.FC<MedicationCheckProps> = ({
               >
                 <Pill className="h-3 w-3" />
                 <span>{medication}</span>
+                <button
+                  onClick={() => onMedicationRemove(medication)}
+                  className="ml-2 hover:text-red-900 transition-colors"
+                  title="약물 삭제"
+                >
+                  <X className="h-3 w-3" />
+                </button>
               </Badge>
             ))}
           </div>
