@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+# 🩺 PillMyBody (필마바디)
 
-## Project info
+**당신의 몸에 꼭 맞는 영양제 조합을 찾아드립니다.**  
+영양제 조합 분석 & AI 추천 기반 건강보조제 가이드 서비스
 
-**URL**: https://lovable.dev/projects/7f33c397-a50d-485c-9cbb-acc4ccb3f24f
+🔗 **배포 주소**: [https://nutri-safe-insight.lovable.app](https://nutri-safe-insight.lovable.app)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📌 서비스 소개
 
-**Use Lovable**
+PillMyBody (필마바디)는 사용자의 건강 상태에 따라  
+영양제를 **안전하고 효과적으로 조합**할 수 있도록 돕는 **모바일 앱 기반 서비스**입니다.  
+AI 기반 추천 시스템과, **과학적 근거**를 바탕으로 한  
+영양제 **상호작용 분석 기능**을 통해 다음과 같은 기능을 제공합니다.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7f33c397-a50d-485c-9cbb-acc4ccb3f24f) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✅ 주요 기능
 
-**Use your preferred IDE**
+| 기능 | 설명 |
+|------|------|
+| **영양제 조합 분석** | 복수의 영양제를 입력하면 함께 먹어도 되는지, 주의가 필요한지를 분석함 |
+| **AI 추천** | 사용자 상태(예: 피로, 집중력 저하, 피부 고민 등)에 따라 영양제 추천 제공 |
+| **근거 기반 설명** | 각각의 조합 분석과 추천에 대해 과학적/의학적 자료 근거를 함께 제공함 |
+| **직관적인 UI** | 모바일 사용자를 위한 깔끔하고 간결한 UI로 빠른 정보 탐색 가능 |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧠 사용 예시
 
-Follow these steps:
+사용자 A는 “비타민 D”, “칼슘”, “오메가3”를 복용하고 있으며, 최근 **피로를 자주 느낍니다**.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+➡️ **PillMyBody**는 A의 영양제 조합에서 **시너지 효과**가 있는지를 분석하고,  
+**부작용 우려**가 있는 조합은 사용자에게 **주의 메시지**를 제공합니다.  
+➡️ 동시에, AI가 A의 건강 상태에 적합한 **추가 영양제**를 제안합니다.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🔍 예시 분석 결과
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **A + B** → ✅ *시너지 효과 있음*
+- **A + C** → ⚠️ *부작용 가능성 → 섭취 주의*
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📚 과학적 근거 제공
 
-**Use GitHub Codespaces**
+- 추천 결과 및 조합 분석에는 **논문**, **식약처**, **의약품 데이터** 등을 기반으로 한 정보를 함께 제공합니다.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7f33c397-a50d-485c-9cbb-acc4ccb3f24f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+> **PillMyBody**는 당신의 건강 상태에 맞는 맞춤형 솔루션을 제공합니다.  
+> 믿을 수 있는 정보와 함께, 더 건강한 내일을 만들어보세요!
